@@ -9,7 +9,7 @@
 
     <link rel="icon" href="./images/favicon.png" type="image/png">
 
-    <title>Kết nối EC2 với EIC Endpoints</title>
+    <title>Làm việc với IAM</title>
 
     
     <link href="./css/nucleus.css?1691463368" rel="stylesheet">
@@ -139,51 +139,18 @@
  
   
     
-    <li data-nav-id="/2-preparation/2.1-createVPCwithprivatesubnets/" title="Create VPC with private subnets" class="dd-item 
+    <li data-nav-id="/2-preparation/2.1-createIAMuser/" title="Create IAM user" class="dd-item 
         
         
         
         ">
-      <a href="./2-preparation/2.1-createVPCwithprivatesubnets/">
-           <b> 2.1 </b> Tạo VPC với Private Subnets
+      <a href="./2-preparation/2.1-createIAMuser/">
+           <b> 2.1 </b> Tạo IAM user
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
 
-
-      
-       
-    
-                                  
-          
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-preparation/2.2-installawscli/" title="Install AWS CLI" class="dd-item 
-        
-        
-        
-        ">
-      <a href="./2-preparation/2.2-installawscli/">
-           <b> 2.2 </b> Cài đặt AWS CLI
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
 
             
           
@@ -203,144 +170,20 @@
  
   
     
-    <li data-nav-id="/3-createIAMRole/" title="Create IAM Role" class="dd-item 
+    <li data-nav-id="/3-IAMpolicytype/" title="IAM policy type" class="dd-item 
         
         
         
         ">
-      <a href="./3-createIAMRole/">
-           <b> 3. </b> Tạo chính sách IAM
+      <a href="./3-IAMpolicytype/">
+           <b> 3. </b> IAM Policy Type
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
             
-  
-              
-    </li>
-  
- 
 
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-configureIAMusercredentials/" title="Configure IAM user credentials" class="dd-item 
-        
-        
-        
-        ">
-      <a href="./4-configureIAMusercredentials/">
-           <b> 4. </b> Định cấu hình thông tin xác thực người dùng IAM
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-configureIAMusercredentials/4.1-runcommandawsconfigure/" title="Run command aws configure" class="dd-item 
-        
-        
-        
-        ">
-      <a href="./4-configureIAMusercredentials/4.1-runcommandawsconfigure/">
-           <b> 4.1 </b> Chạy câu lệnh "aws configure"
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-configureIAMusercredentials/4.2-verifiedopensshclientinstalled/" title="Verified Open SSH client installed" class="dd-item 
-        
-        
-        
-        ">
-      <a href="./4-configureIAMusercredentials/4.2-verifiedopensshclientinstalled/">
-           <b> 4.2 </b> Xác minh Open SSH Client đã được cài đặt
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-createtheEC2InstanceConnectEndpoints/" title="Create the EC2 Instance Connect Endpoints" class="dd-item 
-        
-        
-        
-        ">
-      <a href="./5-createtheEC2InstanceConnectEndpoints/">
-           <b> 5. </b> Tạo điểm cuối kết nối phiên bản EC2
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-
-
-
 
       <ul>
           
@@ -360,13 +203,13 @@
  
   
     
-        <li data-nav-id="/5-createtheEC2InstanceConnectEndpoints/5.1-createsecuritygroups/" title="Create security groups" class="dd-item 
+        <li data-nav-id="/3-IAMpolicytype/3.1-managedpolicy/" title="Managed Policy" class="dd-item 
             
             
             
             ">
-          <a href="./5-createtheEC2InstanceConnectEndpoints/5.1-createsecuritygroups/">
-               <b> 5.1 </b> Tạo nhóm bảo mật trong VPC
+          <a href="./3-IAMpolicytype/3.1-managedpolicy/">
+               <b> 3.1 </b> Managed Policy
               
                 <i class="fas fa-check read-icon"></i>
               
@@ -388,13 +231,13 @@
      
       
         
-        <li data-nav-id="/5-createtheEC2InstanceConnectEndpoints/5.2-createtheEC2instanceconnectendpoints/" title="Create ec2-instance-connect-endpoint" class="dd-item 
+        <li data-nav-id="/3-IAMpolicytype/3.2-custompolicy/" title="Custom Policy" class="dd-item 
             
             
             
             ">
-          <a href="./5-createtheEC2InstanceConnectEndpoints/5.2-createtheEC2instanceconnectendpoints/">
-               <b> 5.2 </b> Tạo điểm cuối kết nối phiên bản EC2
+          <a href="./3-IAMpolicytype/3.2-custompolicy/">
+               <b> 3.2 </b> Custom Policy
               
                 <i class="fas fa-check read-icon"></i>
               
@@ -405,7 +248,26 @@
       
      
     
-                
+        
+        
+    
+        <li data-nav-id="/3-IAMpolicytype/3.3-inlinepolicy/" title="Inline Policy" class="dd-item 
+            
+            
+            
+            ">
+          <a href="./3-IAMpolicytype/3.3-inlinepolicy/">
+               <b> 3.3 </b> Inline Policy
+              
+                <i class="fas fa-check read-icon"></i>
+              
+          </a>
+          
+                  
+        </li>
+    
+    
+    
     
                 
               
@@ -417,8 +279,62 @@
 
 
 
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-createaccountalias/" title="Create Account Alias" class="dd-item 
+        
+        
+        
+        ">
+      <a href="./4-createaccountalias/">
+           <b> 4. </b> Create Account Alias
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
 
               
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-PermissionsBoundary/" title="Permissions Boundary" class="dd-item 
+        
+        
+        
+        ">
+      <a href="./5-PermissionsBoundary/">
+           <b> 5. </b> Permissions Boundary
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+
+        
     </li>
   
  
@@ -436,116 +352,20 @@
 
 
 
-    <li data-nav-id="/6-connectEC2toEICEndpoints/" title="Connect EC2 to EIC Endpoints" class="dd-item 
+    <li data-nav-id="/6-cleanup/" title="Clean up" class="dd-item 
         
         
         
         ">
-      <a href="./6-connectEC2toEICEndpoints/">
-          <b> 6. </b> Kết nối EC2 với EIC Endpoints
+      <a href="./6-cleanup/">
+          <b> 6. </b> Dọn dẹp tài nguyên
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
 
 
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
 
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-connectEC2toEICEndpoints/6.1-create2EC2servers/" title="Create 2 EC2 servers" class="dd-item 
-            
-            
-            
-            ">
-      <a href="./6-connectEC2toEICEndpoints/6.1-create2EC2servers/">
-          <b> 6.1 </b> Tạo 2 máy chủ EC2
-              
-            <i class="fas fa-check read-icon"></i>
-              
-      </a>
-          
-                  
-    </li>
-      
-     
-    
-                
-              
-                
-                
-    
-    
-    
-    
-     
-      
-        
-    <li data-nav-id="/6-connectEC2toEICEndpoints/6.2-connectEC2toEICEndpoints/" title="Connect EC2 to EIC Endpoints" class="dd-item 
-            
-            
-            
-            ">
-      <a href="./6-connectEC2toEICEndpoints/6.2-connectEC2toEICEndpoints/">
-          <b> 6.2 </b> Kết nối EC2 với EIC Endpoints
-              
-            <i class="fas fa-check read-icon"></i>
-              
-      </a>
-          
-                  
-    </li>
-      
-     
-    
-                
-    
-                
-              
-            
-          </ul>  
-              
-    </li>
-
-
-
-
-
-
-
-
-
-
-
-
-    <li data-nav-id="/7-cleanupresources/" title="Clean up resources" class="dd-item 
-        
-        
-        
-        ">
-      <a href="./7-cleanupresources/">
-          <b> 7. </b> Dọn dẹp tài nguyên
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
 
 
 
@@ -675,19 +495,18 @@
 </span>
 
  
-<h1 id="work-with-amazon-system-manager---session-manager">Kết nối EC2 với EIC Endpoints</h1>
+<h1 id="work-with-amazon-system-manager---session-manager">Làm việc với IAM</h1>
 <h3 id="overall">Tổng quan</h3>
-<p>Trong phòng thí nghiệm này, bạn sẽ tìm hiểu kiến ​​thức cơ bản và thực hành về <strong>EIC Endpoints</strong>. Bằng cách định cấu hình EIC Endpoints cho VPC của mình, bạn có thể kết nối an toàn bằng các công cụ máy khách hiện có hoặc Console/AWS CLI.</p>
-<p><img src="./images/eic.png" alt="ConnectPrivate"></p>
+<p>Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về <strong>IAM</strong>. Bằng các bài thực hành tìm hiểu về <strong>IAM policy type</strong>, <strong>tạo Account Alias</strong> và <strong>set Permissions boundary</strong>, bạn có thể hiểu rõ hơn về các tính năng của <strong>IAM</strong></p>
+<p><img src="./images/iamaws.png" alt="ConnectPrivate"></p>
 <h3 id="content">Nội dung</h3>
 <ol>
 <li><a href="1-introduce/">Giới thiệu </a></li>
 <li><a href="2-preparation/">Chuẩn bị </a></li>
-<li><a href="3-createIAMRole/">Tạo chính sách IAM </a></li>
-<li><a href="4-configureIAMusercredentials/">Định cấu hình thông tin xác thực người dùng IAM</a></li>
-<li><a href="5-createtheEC2InstanceConnectEndpoints/">Tạo điểm cuối kết nối phiên bản EC2</a></li>
-<li><a href="6-connectEC2toEICEndpoints/">Kết nối EC2 EIC Endpoints</a></li>
-<li><a href="7-cleanupresources/">Dọn dẹp tài nguyên</a></li>
+<li><a href="3-IAMpolicytype/">IAM Policy Type</a></li>
+<li><a href="4-createaccountalias/">Tạo Account Alias</a></li>
+<li><a href="5-PermissionsBoundary/">Permissions Boundary</a></li>
+<li><a href="6-cleanup/">Dọn dẹp tài nguyên</a></li>
 </ol>
 	
   
