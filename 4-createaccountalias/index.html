@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../images/favicon.png" type="image/png">
 
-    <title>4-configure IAM user credentials:: EIC Endpoints</title>
+    <title>Tạo Account Alias:: IAM</title>
 
     
     <link href="../css/nucleus.css?1691463369" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../4-configureIAMusercredentials/">
+  <body class="" data-url="../4-createaccountalias/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -82,452 +82,289 @@
  
   
     
-    <li data-nav-id="/1-introduction" title="Introduction" class="dd-item 
+    <li data-nav-id="/1-introduction/" title="Introduction" class="dd-item 
         
-        
-        
-        ">
+    
+    
+      ">
       <a href="../1-introduction/">
-           <b> 1. </b> Giới thiệu
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
+        <b> 1. </b> Giới thiệu
     
-    <li data-nav-id="/2-preparation/" title="Preparation " class="dd-item 
-        
-        
-        
-        ">
-      <a href="../2-preparation/">
-           <b> 2. </b> Chuẩn bị
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
+          <i class="fas fa-check read-icon"></i>
     
-    <li data-nav-id="/2-preparation/2.1-createVPCwithprivatesubnets" title="Create VPC with Private Subnets" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../2-preparation/2.1-createVPCwithprivatesubnets">
-           <b> 2.1 </b> Tạo VPC với Private Subnets
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-preparation/2.2-installawscli/" title="Install AWS CLI" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../2-preparation/2.2-installawscli/">
-           <b> 2.2 </b> Cài đặt AWS CLI
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-createIAMRole/" title="Create IAM Role" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../3-createIAMRole/">
-           <b> 3. </b> Tạo chính sách IAM
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-configureIAMusercredentials/" title="Configure IAM user credentials" class="dd-item 
-        
-        active
-        
-        ">
-      <a href="../4-configureIAMusercredentials/">
-           <b> 4. </b> Định cấu hình thông tin xác thực người dùng IAM
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-configureIAMusercredentials/4.1-runcommandawsconfigure/" title="Run command aws configure" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../4-configureIAMusercredentials/4.1-runcommandawsconfigure/">
-           <b> 4.1 </b> Chạy câu lệnh "aws configure"
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-configureIAMusercredentials/4.2-verifiedopensshclientinstalled/" title="Verified Open SSH client installed" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../4-configureIAMusercredentials/4.2-verifiedopensshclientinstalled/">
-           <b> 4.2 </b> Xác minh Open SSH client đã được cài đặt
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-createtheEC2InstanceConnectEndpoints/" title="Create the EC2 Instance Connect Endpoints" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../5-createtheEC2InstanceConnectEndpoints/">
-           <b> 5. </b> Tạo điểm cuối kết nối phiên bản EC2
-          
-            <i class="fas fa-check read-icon"></i>
-          
       </a>
 
-      
-
-
-      <ul>
-          
-          
-            
-          
-          
-          
         
-          
-            
-            
-
-
-
-
- 
-  
-    
-        <li data-nav-id="/5-createtheEC2InstanceConnectEndpoints/5.1-createsecuritygroups/" title="Create security groups" class="dd-item 
-            
-            
-            
-            ">
-          <a href="../5-createtheEC2InstanceConnectEndpoints/5.1-createsecuritygroups/">
-               <b> 5.1 </b> Tạo nhóm bảo mật trong VPC
-              
-                <i class="fas fa-check read-icon"></i>
-              
-          </a>
-          
-                  
-        </li>
-      
-     
-    
-                
-              
-                
-                
-    
-    
-    
-    
-     
-      
-        
-        <li data-nav-id="/5-createtheEC2InstanceConnectEndpoints/5.2-createtheEC2instanceconnectendpoints/" title="Create ec2-instance-connect-endpoint" class="dd-item 
-            
-            
-            
-            ">
-          <a href="../5-createtheEC2InstanceConnectEndpoints/5.2-createtheEC2instanceconnectendpoints/">
-               <b> 5.2 </b> Tạo điểm cuối kết nối phiên bản EC2
-              
-                <i class="fas fa-check read-icon"></i>
-              
-          </a>
-          
-                  
-        </li>
-      
-     
-    
-                
-    
-                
-              
-            
-            </ul>
-
-
-
-
-              
-    </li>
-  
- 
-
-          
-   
-    
-
-
-
-
-
-    <li data-nav-id="/6-connectEC2toEICEndpoints/" title="Create 2 EC2 servers" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../6-connectEC2toEICEndpoints/">
-          <b>6. </b> Kết nối EC2 với EIC Endpoints
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-        <ul>
-      
-      
-        
-      
-
-
-
-
-
-
-    <li data-nav-id="/6-connectEC2toEICEndpoints/6.1-create2EC2servers/" title="Create 2 EC2 servers" class="dd-item 
-            
-            
-            
-        ">
-      <a href="../6-connectEC2toEICEndpoints/6.1-create2EC2servers/">
-          <b> 6.1 </b> Tạo 2 máy chủ EC2
-              
-            <i class="fas fa-check read-icon"></i>
-              
-      </a>
-          
-                  
-    </li>
-      
-     
-    
-                
-              
-                
-                
-    
-    
-    
-    
-     
-      
-        
-    <li data-nav-id="/6-connectEC2toEICEndpoints/6.2-connectEC2toEICEndpoints/" title="Connect EC2 to EIC Endpoints" class="dd-item 
-            
-            
-            
-        ">
-      <a href="../6-connectEC2toEICEndpoints/6.2-connectEC2toEICEndpoints/">
-          <b> 6.2 </b> Kết nối EC2 với EIC Endpoints
-              
-            <i class="fas fa-check read-icon"></i>
-              
-      </a>
-          
-                  
-    </li>
-      
-     
-          
-              
-            
-        </ul>  
-
-             
     </li>
 
 
 
+    
+    
 
 
 
 
 
 
- 
+
+<li data-nav-id="/2-preparation/" title="Preparation" class="dd-item 
+  
+  
+  
+  ">
+<a href="../2-preparation/">
+     <b> 2. </b> Chuẩn bị
+    
+      <i class="fas fa-check read-icon"></i>
+    
+</a>
+
+
+  <ul>
+    
+    
+      
+    
+    
+    
   
     
-    <li data-nav-id="/7-cleanupresources/" title="Clean up resources" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../7-cleanupresources/">
-          <b>7. </b> Dọn dẹp tài nguyên
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
       
-              
-    </li>
+      
+
+
+
+
+
+
+
+<li data-nav-id="/2-preparation/2.1-createIAMuser/" title="Create IAM user" class="dd-item 
+  
+  
+  
+  ">
+<a href="../2-preparation/2.1-createIAMuser/">
+     <b> 2.1 </b> Tạo IAM user
+    
+      <i class="fas fa-check read-icon"></i>
+    
+</a>
+
+
+      
+    
+  
+  </ul>
+        
+</li>
+
+
+
+    
+    
+
+
+
+
+
+
+
+<li data-nav-id="/3-IAMpolicytype/" title="IAM policy type" class="dd-item 
+  
+  
+  
+  ">
+<a href="../3-IAMpolicytype/">
+     <b> 3. </b> IAM Policy Type
+    
+      <i class="fas fa-check read-icon"></i>
+    
+</a>
+      
+
+
+
+<ul>
+    
+    
+      
+    
+    
+    
+  
+    
+      
+      
+
+
+
+
+
+
+
+  <li data-nav-id="/3-IAMpolicytype/3.1-managedpolicy/" title="Managed Policy" class="dd-item 
+      
+      
+      
+      ">
+    <a href="../3-IAMpolicytype/3.1-managedpolicy/">
+         <b> 3.1 </b> Managed Policy
+        
+          <i class="fas fa-check read-icon"></i>
+        
+    </a>
+    
+            
+  </li>
+
+
+
+          
+        
+          
+          
+
+
+
+
+
+
+  
+  <li data-nav-id="/3-IAMpolicytype/3.2-custompolicy/" title="Custom Policy" class="dd-item 
+      
+      
+      
+      ">
+    <a href="../3-IAMpolicytype/3.2-custompolicy/">
+         <b> 3.2 </b> Custom Policy
+        
+          <i class="fas fa-check read-icon"></i>
+        
+    </a>
+    
+            
+  </li>
+
+
+
+  
+  
+
+  <li data-nav-id="/3-IAMpolicytype/3.3-inlinepolicy/" title="Inline Policy" class="dd-item 
+      
+      
+      
+      ">
+    <a href="../3-IAMpolicytype/3.3-inlinepolicy/">
+         <b> 3.3 </b> Inline Policy
+        
+          <i class="fas fa-check read-icon"></i>
+        
+    </a>
+    
+            
+  </li>
+
+
+
+
+          
+        
+      
+      </ul>
+
+
+
+
+
+
+        
+</li>
+
+
+
+    
+    
+
+
+
+
+
+
+
+<li data-nav-id="/4-createaccountalias/" title="Create Account Alias" class="dd-item 
+  
+  active
+  
+  ">
+<a href="../4-createaccountalias/">
+     <b> 4. </b> Create Account Alias
+    
+      <i class="fas fa-check read-icon"></i>
+    
+</a>
+
+
+
+        
+</li>
+
+
+
+    
+    
+
+
+
+
+
+
+
+<li data-nav-id="/5-PermissionsBoundary/" title="Permissions Boundary" class="dd-item 
+  
+  
+  
+  ">
+<a href="../5-PermissionsBoundary/">
+     <b> 5. </b> Permissions Boundary
+    
+      <i class="fas fa-check read-icon"></i>
+    
+</a>
+
+
+  
+</li>
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+<li data-nav-id="/6-cleanup/" title="Clean up" class="dd-item 
+  
+  
+  
+  ">
+<a href="../6-cleanup/">
+    <b> 6. </b> Dọn dẹp tài nguyên
+    
+      <i class="fas fa-check read-icon"></i>
+    
+</a>
+
+</li>
   
  
 
@@ -665,7 +502,7 @@
             
           
           
-            <a href='../'>EIC Endpoints</a> > Định cấu hình thông tin xác thực người dùng IAM
+            <a href='../'>IAM</a> > Tạo Account Alias
           
         
           
@@ -700,7 +537,7 @@
           
             <h1>
               
-              Định cấu hình thông tin xác thực người dùng IAM
+              Tạo Account Alias
             </h1>
           
 
@@ -708,14 +545,54 @@
 
 
 
-	<p>Bạn sẽ định cấu hình thông tin đăng nhập của người dùng IAM trên máy tính bằng cách sử dụng câu lệnh <strong>AWS CLI</strong> mà đã cài đặt ở bước 2</p>
-<p><img src="../images/4.configureiamusercredentials/cli-1.png" alt="cli-1"></p>
-<p>Ngoài ra bạn sẽ cần phải xác minh <strong>máy tính khách Open SSH</strong> đã được cài đặt trên máy tính của bạn</p>
-<h3 id="content">Content:</h3>
+<h4 id="create-account-alias">Tạo Account Alias</h4>
+<div class="notices info"><p>Khi đăng nhập với IAM user, thỉnh thoảng bạn muốn đăng nhập khi không có đường link, bạn phải nhớ Account ID nên đến 12 chữ số</p></div>
+<p>Vậy nên trong bài này sẽ hướng dẫn bạn cách tạo <strong>Account Alias</strong> theo ý muốn và đăng nhập với <strong>Account Alias</strong> thay thế cho <strong>Account ID</strong></p>
+<p><img src="../images/4.configureiamusercredentials/a-1.png" alt="a-1"></p>
+<ol>
+  <li>Quay lại trang <a href="https://console.aws.amazon.com/iamv2/home?#/home">IAM service management console</a></li>
+</ol>
 <ul>
-<li><a href="./4.1-runcommandawsconfigure/">Chạy câu lệnh "aws configure"</a></li>
-<li><a href="./4.2-verifiedopensshclientinstalled/">Xác minh Open SSH Client đã được cài đặt</a></li>
+  <li>Tại mục <strong>Account Alias</strong>, click vào <strong>Create</strong></li>
 </ul>
+<p><img src="../images/4.configureiamusercredentials/a-2.png" alt="a-1"></p>
+<ol start="2">
+  <li>Điền tên mà bạn muốn thay thế cho <strong>Accouns ID</strong></li>
+</ol>
+<ul>
+  <li>Bài này mình điền tên mà mình cảm thấy dễ nhớ: <strong>hoado-aws</strong></li>
+</ul>
+<p><img src="../images/4.configureiamusercredentials/a-3.png" alt="a-1"></p>
+<ul>
+  <li>Click <strong>Create alias</strong></li>
+</ul>
+<p><img src="../images/4.configureiamusercredentials/a-4.png" alt="a-1"></p>
+<p>Vậy là đã tạo Account Alias thành công với tên : <strong>hoado-aws</strong></p>
+<div class="notices info"><p>Bạn có thể thực hiện các thao tác chỉnh sửa như Edit hoặc Delete Account Alias</p></div>
+<ol start="3">
+  <li>Thực hiện mở trang <strong>Sign in</strong> của AWS</li>
+</ol>
+<ul>
+  <li>Click chọn <strong>IAM user</strong></li>
+</ul>
+<p><img src="../images/4.configureiamusercredentials/a-5.png" alt="a-1"></p>
+<ol start="4">
+  <li>Điền <strong>Account Alias</strong> vừa tạo</li>
+</ol>
+<p><img src="../images/4.configureiamusercredentials/a-6.png" alt="a-1"></p>
+<ul>
+  <li>Click <strong>Next</strong></li>
+</ul>
+<p><img src="../images/4.configureiamusercredentials/a-7.png" alt="a-1"></p>
+<ol start="5">
+  <li>Điền <strong>TAM user name</strong> và <strong>Password</strong></li>
+</ol>
+<p><img src="../images/4.configureiamusercredentials/a-8.png" alt="a-1"></p>
+<ul>
+  <li>Thực hiện <strong>Sign in</strong></li>
+</ul>
+<p><img src="../images/4.configureiamusercredentials/a-9.png" alt="a-1"></p>
+<p>Đăng nhập thành công với <strong>Account Alias</strong></p>
 
 
 
