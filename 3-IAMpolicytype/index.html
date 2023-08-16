@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../images/favicon.png" type="image/png">
 
-    <title>Tạo chính sách IAM :: EIC Endpoints</title>
+    <title>IAM Policy Type :: IAM</title>
 
     
     <link href="../css/nucleus.css?1691463368" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="../3-createIAMRole/">
+  <body class="" data-url="../3-IAMpolicytype/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -82,455 +82,289 @@
  
   
     
-    <li data-nav-id="/1-introduction/" title="Introduction" class="dd-item 
+      <li data-nav-id="/1-introduction/" title="Introduction" class="dd-item 
         
         
         
-        ">
-      <a href="../1-introduction/">
-           <b> 1. </b> Giới thiệu
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
+      ">
+    <a href="../1-introduction/">
+         <b> 1. </b> Giới thiệu
+        
+          <i class="fas fa-check read-icon"></i>
+        
+    </a>
     
-    <li data-nav-id="/2-preparation/" title="Preparation " class="dd-item 
-        
-        
-        
-        ">
-      <a href="../2-preparation/">
-           <b> 2. </b> Chuẩn bị 
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
             
-          
-          
-          
+  </li>
+
+
+
         
-          
-            
-            
+        
 
 
 
 
- 
+
+
   
+  <li data-nav-id="/2-preparation/" title="Preparation" class="dd-item 
+      
+      
+      
+      ">
+    <a href="../2-preparation/">
+         <b> 2. </b> Chuẩn bị
+        
+          <i class="fas fa-check read-icon"></i>
+        
+    </a>
     
-    <li data-nav-id="/2-preparation/2.1-createVPCwithprivatesubnets" title="Create VPC with Private Subnets" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../2-preparation/2.1-createVPCwithprivatesubnets">
-           <b> 2.1 </b> Tạo VPC với Private Subnets
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
     
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-preparation/2.2-installawscli/" title="Install AWS CLI" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../2-preparation/2.2-installawscli/">
-           <b> 2.2 </b> Cài đặt AWS CLI
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-createIAMRole/" title="Create IAM Role" class="dd-item 
-        
-        active
-        
-        ">
-      <a href="../3-createIAMRole/">
-           <b> 3. </b> Tạo chính sách IAM
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-    
-
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-configureIAMusercredentials/" title="Configure IAM user credentials" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../4-configureIAMusercredentials/">
-           <b> 4. </b> Định cấu hình thông tin xác thực người dùng IAM
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-configureIAMusercredentials/4.1-runcommandawsconfigure/" title="Run command aws configure" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../4-configureIAMusercredentials/4.1-runcommandawsconfigure/">
-           <b> 4.1 </b> Chạy câu lệnh "aws configure"
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-configureIAMusercredentials/4.2-verifiedopensshclientinstalled/" title="Verified Open SSH client installed" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../4-configureIAMusercredentials/4.2-verifiedopensshclientinstalled/">
-           <b> 4.2 </b> Xác minh Open SSH client đã được cài đặt
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-createtheEC2InstanceConnectEndpoints/" title="Create the EC2 Instance Connect Endpoints" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../5-createtheEC2InstanceConnectEndpoints/">
-           <b> 5. </b> Tạo điểm cuối kết nối phiên bản EC2
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-
-      
-
-
-
       <ul>
-          
-          
-            
-          
-          
-          
+        
         
           
-            
-            
+        
+        
+        
+      
+        
+          
+          
 
 
 
 
- 
+
+
   
-    
-        <li data-nav-id="/5-createtheEC2InstanceConnectEndpoints/5.1-createsecuritygroups/" title="Create security groups" class="dd-item 
-            
-            
-            
-            ">
-          <a href="../5-createtheEC2InstanceConnectEndpoints/5.1-createsecuritygroups/">
-               <b> 5.1 </b> Tạo nhóm bảo mật trong VPC
-              
-                <i class="fas fa-check read-icon"></i>
-              
-          </a>
-          
-                  
-        </li>
+  <li data-nav-id="/2-preparation/2.1-createIAMuser/" title="Create IAM user" class="dd-item 
       
-     
-    
-                
-              
-                
-                
-    
-    
-    
-    
-     
       
+      
+      ">
+    <a href="../2-preparation/2.1-createIAMuser/">
+         <b> 2.1 </b> Tạo IAM user
         
-        <li data-nav-id="/5-createtheEC2InstanceConnectEndpoints/5.2-createtheEC2instanceconnectendpoints/" title="Create ec2-instance-connect-endpoint" class="dd-item 
-            
-            
-            
-            ">
-          <a href="../5-createtheEC2InstanceConnectEndpoints/5.2-createtheEC2instanceconnectendpoints/">
-               <b> 5.2 </b> Tạo điểm cuối kết nối phiên bản EC2
-              
-                <i class="fas fa-check read-icon"></i>
-              
-          </a>
+          <i class="fas fa-check read-icon"></i>
+        
+    </a>
+
+
           
-                  
-        </li>
+        
       
-     
-    
-                
-    
-                
-              
+      </ul>
             
-            </ul>
+  </li>
+
+
+
+        
+        
 
 
 
 
 
 
-
-              
-    </li>
   
- 
-
+  <li data-nav-id="/3-IAMpolicytype/" title="IAM policy type" class="dd-item 
+      
+      active
+      
+      ">
+    <a href="../3-IAMpolicytype/">
+         <b> 3. </b> IAM Policy Type
+        
+          <i class="fas fa-check read-icon"></i>
+        
+    </a>
           
+
+    
+
+    <ul>
+        
+        
           
-
-
-
-
-
-
-    <li data-nav-id="/6-connectEC2toEICEndpoints/" title="Create 2 EC2 servers" class="dd-item 
         
         
         
-        ">
-      <a href="../6-connectEC2toEICEndpoints/">
-          <b>6. </b> Kết nối EC2 với EIC Endpoints
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-        <ul>
-      
       
         
-      
-
-
-
-
-
-
-    <li data-nav-id="/6-connectEC2toEICEndpoints/6.1-create2EC2servers/" title="Create 2 EC2 servers" class="dd-item 
-            
-            
-            
-        ">
-      <a href="../6-connectEC2toEICEndpoints/6.1-create2EC2servers/">
-          <b> 6.1 </b> Tạo 2 máy chủ EC2
-              
-            <i class="fas fa-check read-icon"></i>
-              
-      </a>
           
-                  
-    </li>
-      
-     
-    
-                
-              
-                
-                
-    
-    
-    
-    
-     
-      
-        
-    <li data-nav-id="/6-connectEC2toEICEndpoints/6.2-connectEC2toEICEndpoints/" title="Connect EC2 to EIC Endpoints" class="dd-item 
-            
-            
-            
-        ">
-      <a href="../6-connectEC2toEICEndpoints/6.2-connectEC2toEICEndpoints/">
-          <b> 6.2 </b> Kết nối EC2 với EIC Endpoints
-              
-            <i class="fas fa-check read-icon"></i>
-              
-      </a>
           
-                  
-    </li>
-      
-     
-          
-              
-            
-        </ul>  
-
-             
-    </li>
 
 
 
 
 
 
-
-
-
- 
   
+      <li data-nav-id="/3-IAMpolicytype/3.1-managedpolicy/" title="Managed Policy" class="dd-item 
+          
+          
+          
+          ">
+        <a href="../3-IAMpolicytype/3.1-managedpolicy/">
+             <b> 3.1 </b> Managed Policy
+            
+              <i class="fas fa-check read-icon"></i>
+            
+        </a>
+        
+                
+      </li>
     
-    <li data-nav-id="/7-cleanupresources/" title="Clean up resources" class="dd-item 
-        
-        
-        
-        ">
-      <a href="../7-cleanupresources/">
-          <b>7. </b> Dọn dẹp tài nguyên
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
+   
+  
               
-    </li>
+            
+              
+              
+  
+  
+  
+  
+   
+    
+      
+      <li data-nav-id="/3-IAMpolicytype/3.2-custompolicy/" title="Custom Policy" class="dd-item 
+          
+          
+          
+          ">
+        <a href="../3-IAMpolicytype/3.2-custompolicy/">
+             <b> 3.2 </b> Custom Policy
+            
+              <i class="fas fa-check read-icon"></i>
+            
+        </a>
+        
+                
+      </li>
+    
+   
+  
+      
+      
+  
+      <li data-nav-id="/3-IAMpolicytype/3.3-inlinepolicy/" title="Inline Policy" class="dd-item 
+          
+          
+          
+          ">
+        <a href="../3-IAMpolicytype/3.3-inlinepolicy/">
+             <b> 3.3 </b> Inline Policy
+            
+              <i class="fas fa-check read-icon"></i>
+            
+        </a>
+        
+                
+      </li>
+  
+  
+  
+  
+              
+            
+          
+          </ul>
+
+
+
+
+
+
+            
+  </li>
+
+
+
+        
+        
+
+
+
+
+
+
+  
+  <li data-nav-id="/4-createaccountalias/" title="Create Account Alias" class="dd-item 
+      
+      
+      
+      ">
+    <a href="../4-createaccountalias/">
+         <b> 4. </b> Create Account Alias
+        
+          <i class="fas fa-check read-icon"></i>
+        
+    </a>
+    
+    
+
+            
+  </li>
+
+
+
+        
+        
+
+
+
+
+
+
+  
+  <li data-nav-id="/5-PermissionsBoundary/" title="Permissions Boundary" class="dd-item 
+      
+      
+      
+      ">
+    <a href="../5-PermissionsBoundary/">
+         <b> 5. </b> Permissions Boundary
+        
+          <i class="fas fa-check read-icon"></i>
+        
+    </a>
+    
+
+      
+  </li>
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+  <li data-nav-id="/6-cleanup/" title="Clean up" class="dd-item 
+      
+      
+      
+      ">
+    <a href="../6-cleanup/">
+        <b> 6. </b> Dọn dẹp tài nguyên
+        
+          <i class="fas fa-check read-icon"></i>
+        
+    </a>
+
+  </li>
   
  
 
@@ -671,7 +505,7 @@
             
           
           
-            <a href='../'>EIC Endpoints</a> > Tạo chính sách IAM
+            <a href='../'>IAM</a> > IAM Policy Type
           
         
           
@@ -706,7 +540,7 @@
           
             <h1>
               
-              Tạo chính sách IAM 
+              IAM Policy Type
             </h1>
           
 
@@ -715,174 +549,29 @@
 
 
 
-<div class="notices info" ><p>Để tạo hoặc sửa đổi điểm cuối và kết nối với tài nguyên, người dùng phải có quyền IAM bắt buộc và mọi nhóm bảo mật được liên kết với tài nguyên VPC của bạn phải có quy tắc cho phép kết nối.</p></div>
-<li>Trong bước 3, bạn cần tạo 2 chính sách IAM và 1 người dùng IAM .</li>
+<div class="notices info" ><p>IAM Policy Type có 3 loại policy :</p>
+  <ul>
+    <li>Managed Policy</li>
+    <li>Custom Policy</li>
+    <li>Inline Policy</li>
+  </ul>
+</div>
 
-<h4>Tạo chính sách IAM cho phép người dùng tạo, mô tả và xóa Điểm cuối kết nối phiên bản EC2 </h4>
-<ol>
-<li>Truy cập vào link tài liệu :<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/permissions-for-ec2-instance-connect-endpoint.html"> https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/permissions-for-ec2-instance-connect-endpoint.html</a></li>
-</ol>
-<ul>
-  <li>Sau khi truy cập đường link, cuộn xuống phần này: </li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-1.png" alt="iam-1"></p>
-<p>Phần trên cho phép bạn tạo một chính sách cho phép người dùng mô tả và xóa Điểm cuối kết nối phiên bản EC2 .</p>
-<p>Cuộn xuống dưới là mẫu của chính sách .</p>
-<p><img src="../images/3.createiamrole/iam-2.png" alt="iam-2"></p>
-<div class="notices note" ><p>Bất cứ điều gì mà AWS đánh dấu đỏ, điều đó có nghĩa là bạn phải cập nhật các giá trị này, vì vậy khi sao chép chính sách này chúng ta cầ cập nhập vị trí và ID tài khoản của chúng ta thay cho phần được đánh dấu đỏ .</p></div>
-<ol start="2">
-<li>Sau khi chỉnh sửa vào copy chính sách, quay lại bảng điều khiển của AWS, vào nhập tìm kiếm <strong>IAM</strong> và chọn <strong>IAM</strong> trong phần dịch vụ .</li>
-</ol>
-<p><img src="../images/3.createiamrole/iam-3.png" alt="iam-3"></p>
-<ol start="3">
-<li>Trong bảng điều khiển IAM chọn <strong>Policies</strong> .</li>
-</ol>
-<ul>
-<li>Ở phần <strong>Policies</strong> click vào <strong>Create policies</strong> .</li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-0.png" alt="iam-0"></p>
-<ol start="4">
-<li>Trên trang này click vào <strong>JSON</strong> .</li>
-</ol>
-<ul>
-<li>Xóa chính sách .</li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-6.png" alt="iam-6"></p>
-<ol start="5">
-<li>Và dán chính sách mà bạn sao chép từ tài liệu vào đây .</li>
-</ol>
-<p><img src="../images/3.createiamrole/iam-8.png" alt="iam-8"></p>
-<ul>
-<li>Bên cạnh đó bạn phải cập nhập <strong>Vị trí</strong> và <strong>ID tài khoản AWS</strong> của bạn như hình trên .</li>
-</ul>
-<div class="notices tip" ><p>Vào giao diện của AWS, click vào tài khoản và vị trí mà bạn sử dụng, sau đó bạn chỉ cần copy vào phần như hình trên  .</p></div>
-<ul>
-<li>Sau đó kéo xuống và click vào <strong>Next</strong> .</li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-9.png" alt="iam-9"></p>
-<ol start="6">
-<li>Trên trang này cuộn lên và đặt tên cho chính sách là <strong>create-eic-endpoints</strong> .</li>
-</ol>
-<p><img src="../images/3.createiamrole/iam-10.png" alt="iam-10"></p>
-<ol start="7">
-<li>Sau đó cuộn xuống và click  <strong>Create policies</strong> .</li>
-</ol>
-<p><img src="../images/3.createiamrole/iam-11.png" alt="iam-11"></p>
-<p>Tạo chính sách thành công</p>
-<p><img src="../images/3.createiamrole/iam-12.png" alt="iam-12"></p>
+<h4>Managed Policy</h4>
+<p><strong>IAM Managed Policy</strong> là các policy được tạo bới AWS, chúng ta chỉ việc chọn các quyền và gán trự c tiếp mà không phải tạo cụ thể từng policy</p>
 
-<h4>Tạo chính sách IAM cho phép người dùng sử dụng Điểm cuối kết nối phiên bản EC2</h4>
-<ol>
-<li>Truy cập vào link tài liệu :<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/permissions-for-ec2-instance-connect-endpoint.html"> https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/permissions-for-ec2-instance-connect-endpoint.html</a></li>
-</ol>
-<ul>
-<li>Sau khi truy cập đường link, cuộn xuống phần này cho phéo người dùng sử dụng điểm cuối kết nối với phiên bản ec2 . </li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-13.png" alt="iam-13"></p>
-<p>Mẫu của chính sách .</p>
-<p><img src="../images/3.createiamrole/iam-14.png" alt="iam-14"></p>
-<div class="notices note" ><p>Sau khi sao chép cần cập nhập vị trí, ID tài khoản của mình và điểm cuối kết nối phiên bản ec2 ở đây (cần phải tạo chính sách kết nối điểm cuối tới phiên bản ec2 mới có thể sửa phần này)</p></div>
-<p><img src="../images/3.createiamrole/iam-15.png" alt="iam-15"></p>
-<ol start="2">
-<li>Quay lại bảng điều khiển của IAM, ở thanh bên trái chọn <strong>Policies</strong> sau đó chọn <strong>Create policies</strong> .</li>
-</ol>
-<ul>
-<li>Sau đó click vào <strong>JSON</strong> và xóa lệnh cũ .</li>
-<li>Sao chép và gán tài liệu vào (Tương tự với Policies vừa rồi) </li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-16.png" alt="iam-16"></p>
-<ul>
-<li>Cập nhật <strong>ID</strong> và <strong>vị trí</strong> .</li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-17.png" alt="iam-17"></p>
-<ul>
-<li>Tiếp đến xóa phần này .</li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-18.png" alt="iam-18"></p>
-<ul>
-<li>Sau khi xóa và điền thêm dấu * ở đây .</li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-19.png" alt="iam-19"></p>
-<ul>
-<li>Tiếp theo, xóa tiếp phần này (Lưu ý chỉ xóa từ dòng 9-17) .</li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-20.png" alt="iam-20"></p>
-<ul>
-<li>Sau khi xóa, chỉnh lại dấu {} .</li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-21.png" alt="iam-21"></p>
-<ol start="3">
-<li>Sau khi sửa xong chính sách, cuộn xuống và click vào <strong>Next</strong> .</li>
-</ol>
-<ol start="4">
-<li>Trong trang này cuộn nên là đặt tên cho Policies là : <strong>use-eic-endpoints</strong></li>
-</ol>
-<p><img src="../images/3.createiamrole/iam-22.png" alt="iam-22"></p>
-<ol start="5">
-<li>Sau đó cuộn xuống và click vào <strong>Create policies</strong></li>
-</ol>
-<p>Tạo chính sách thành công</p>
-<p><img src="../images/3.createiamrole/iam-23.png" alt="iam-23"></p>
+<h4>Custom Policy</h4>
+<p><strong>IAM Custom policy</strong> là khi tạo các quyền riêng mà là các trường hợp đặc thù</p>
 
-<h4>Tạo người dùng IAM có <strong>Access key</strong>, <strong>Secret access key</strong> và đính kèm các chính sách cho người dùng</h4>
-<ol>
-<li>Truy cập vào <strong>IAM</strong></li>
-</ol>
-<ol start="2">
-<li>Trong bảng điều khiển, bên trái click vào <strong>user</strong> sau đó click vào <strong>Add user</strong> .</li>
-</ol>
-<p><img src="../images/3.createiamrole/iam-24.png" alt="iam-24"></p>
-<ol start="3">
-<li>Trong trang này, nhập tên người dùng vào click <strong>Next</strong> .</li>
-</ol>
-<p><img src="../images/3.createiamrole/iam-25.png" alt="iam-25"></p>
-<ol start="4">
-<li>Tiếp theo, click chọn <strong>Attack policies directly</strong> .</li>
-</ol>
-<p><img src="../images/3.createiamrole/iam-26.png" alt="iam-26"></p>
-<ul>
-<li>Cuộn xuống để chọn các chính sách: <strong>AdministratorAccess</strong> .</li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-27.png" alt="iam-27"></p>
-<ul>
-<li>Chọn chính sách: <strong>Create-eic-endpoints</strong> .</li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-28.png" alt="iam-28"></p>
-<ul>
-<li>Chọn chính sách: <strong>use-eic-endpoints</strong> sau đó click vào <strong>Next</strong> .</li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-29.png" alt="iam-29"></p>
-<p>Bạn sẽ thấy 3 chính sách mà ta vừa chọn, tiếp đến click vào <strong>Create user</strong></p>
-<p><img src="../images/3.createiamrole/iam-30.png" alt="iam-30"></p>
-<ol start="5">
-<li>Tạo thành công, tiếp theo click vào <strong>View user</strong> .</li>
-</ol>
-<p><img src="../images/3.createiamrole/iam-31.png" alt="iam-31"></p>
-<ol start="6">
-<li>Trong trang này click vào tab <strong>Security credetials</strong> .</li>
-</ol>
-<p><img src="../images/3.createiamrole/iam-32.png" alt="iam-32"></p>
-<p>Và điều muốn làm là tạo 1 khóa truy cập dưới dạng khóa bí mật bởi người dùng này .</p>
-<div class="notices note" ><p>Bạn chỉ cần thiết lập 1 lần, sau đó chạy lệnh Cli của mình để kết nối dễ dàng với bất kỳ phiên bản nào troong mạng con riêng tư của bạn khi bạn thiết lập nó lần đầu tiên .</p></div>
-<ol start="7">
-<li>Bước này chúng ta sẽ tạo <strong>Access key</strong> và<strong> Secret access key</strong> cho người dùng này, cuộn xuống và click vào<strong> Create access key</strong> .</li>
-</ol>
-<p><img src="../images/3.createiamrole/iam-33.png" alt="iam-33"></p>
-<ul>
-<li>Tiếp theo click chọn <strong>Command Line Interface (CLI)</strong> .</li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-34.png" alt="iam-34"></p>
-<ul>
-<li>Cuộn xuống click vào hộp <strong>I understand the above recommendation and want to proceed to create an access key </strong>và click <strong>Next</strong> .</li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-35.png" alt="iam-35"></p>
-<ul>
-<li>Click vào <strong>Create access key</strong> .</li>
-</ul>
-<p><img src="../images/3.createiamrole/iam-36.png" alt="iam-36"></p>
-<p>Tạo Access key thành công</p>
-<p><img src="../images/3.createiamrole/iam-37.png" alt="iam-37"></p>
+<h4>Inline Policy</h4>
+<p><strong>IAM Inline policy</strong> là khi muốn tạo các policy tạm thời thì có thể sử dụng inline policy, và sẽ thao tác trực tiếp chọn từng dịch vụ cũng như chọn từng access.</p>
 
+<h3 id="content">Nội dung</h3>
+<ul>
+<li><a href="3.1-managedpolicy/">Managed policy</a></li>
+<li><a href="3.2-custompolicy/">Custom policy</a></li>
+<li><a href="3.3-inlinepolicy/">Inline policy</a></li>
+</ul>
 
 
 
