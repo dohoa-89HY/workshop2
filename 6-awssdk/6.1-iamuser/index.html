@@ -751,19 +751,18 @@
 <ol start="2">
   <li>Copy đoạn code vào paste vào file <strong>create_iam_user.py</strong></li>
 </ol>
-<code>
-  import boto3
+<pre tabindex="0"><code>  import boto3
 
-  # Create IAM client
-  iam = boto3.client('iam')
-  
-  # Create user
-  response = iam.create_user(
-      UserName='DoThiHoa'
-  )
-  
-  print(response)
-</code>
+# Create IAM client
+iam = boto3.client('iam')
+
+# Create user
+response = iam.create_user(
+    UserName='DoThiHoa'
+)
+
+print(response)
+</code></pre>
 <ol start="3">
   <li>Chạy chương trình bằng câu lệnh <code>python create_iam_user-py</code></li>
 </ol>
