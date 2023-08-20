@@ -736,9 +736,46 @@
               
               Tạo IAM users
             </h1>
-          
 
-        
+            
+
+
+
+
+<h4>Tạo IAM users</h4> 
+<div class="notices info" ><p>Ở bước này, chúng ta sẽ tạo 1 IAM user có tên: <strong>DoThiHoa</strong></p>
+</div>
+<ol>
+  <li>Tạo tệp có tên: <strong>create_iam_user.py</strong></li>
+</ol> 
+<ol start="2">
+  <li>Copy đoạn code vào paste vào file <strong>create_iam_user.py</strong></li>
+</ol>
+<code>
+  import boto3
+
+  # Create IAM client
+  iam = boto3.client('iam')
+  
+  # Create user
+  response = iam.create_user(
+      UserName='DoThiHoa'
+  )
+  
+  print(response)
+</code>
+<ol start="3">
+  <li>Chạy chương trình bằng câu lệnh <code>python create_iam_user-py</code></li>
+</ol>
+<ol start="4">
+  <li>Sau khi chạy thành công, đi đến <a href="https://console.aws.amazon.com/iamv2/home?#/home">IAM service management console</a></li>
+</ol>
+<ul>
+  <li>Click vào <strong>User</strong> và kiểm tra</li>
+</ul>
+<p><img src="../../images/6.SDK/s-1.png" alt="a-1"></p>
+<p>Tạo user thành công</p>
+
 
 
 
