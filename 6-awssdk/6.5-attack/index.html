@@ -697,7 +697,7 @@
             
           
           
-            <a href='../../'>IAM</a> > <a href='../../6-awssdk/'>Các bước chuẩn bị </a> > Tạo IAM users
+            <a href='../../'>IAM</a> > <a href='../../6-awssdk/'>Các bước chuẩn bị </a> > Attack Policy vào 1 Role
           
         
           
@@ -734,14 +734,53 @@
           
             <h1>
               
-              Tạo IAM users
+              Attack Policy vào 1 Role
             </h1>
           
 
         
 
 
+            <h4>Attack Policy vào 1 Role</h4> 
+            <div class="notices info" ><p>Ở bước này, chúng ta sẽ attack policy <strong>AmmazonS3FullAccess</strong> vào role: <strong>dothihoa-aws</strong> vừa tạo thành công</p>
+            </div>
+            <ol>
+              <li>Tạo tệp có tên: <strong>attack_policy_to_a_role.py</strong></li>
+            </ol> 
+            <ol start="2">
+              <li>Copy đoạn code vào paste vào file <strong>attack_policy_to_a_role.py</strong></li>
+            </ol>
+            
+            <pre>
+            <code tabindex="0">  
+              import boto3
 
+              ROLE_NAME = 'dothihoa-aws'
+              
+              resource = boto3.resource('iam')
+              
+              role = resource.Role(ROLE_NAME)
+              
+              role.attach_policy(
+                  PolicyArn='arn:aws:iam::aws:policy/AmazonS3FullAccess'
+              )
+              
+              print('Policy has been attached to the IAM role')
+            </code>
+            </pre>
+            
+            <ol start="3">
+              <li>Chạy chương trình bằng câu lệnh <code>attack_policy_to_a_role.py</code></li>
+            </ol>
+            <ol start="4">
+              <li>Sau khi chạy thành công, đi đến <a href="https://console.aws.amazon.com/iamv2/home?#/home">IAM service management console</a></li>
+            </ol>
+            <ul>
+              <li>Click vào <strong>Role</strong></li>
+              <li>Click vào <strong>dothihoa-aws</strong> và kéo xuống kiểm tra</li>
+            </ul>
+            <p><img src="../../images/6.SDK/s-1.png" alt="a-1"></p>
+            <p>Attack thành công</p>
 
 
 

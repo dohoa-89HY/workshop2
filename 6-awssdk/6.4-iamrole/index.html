@@ -697,7 +697,7 @@
             
           
           
-            <a href='../../'>IAM</a> > <a href='../../6-awssdk/'>Các bước chuẩn bị </a> > Tạo IAM users
+            <a href='../../'>IAM</a> > <a href='../../6-awssdk/'>Các bước chuẩn bị </a> > Tạo IAM Role
           
         
           
@@ -734,13 +734,59 @@
           
             <h1>
               
-              Tạo IAM users
+              Tạo IAM Role
             </h1>
           
 
         
 
-
+            <h4>Tạo IAM ROle</h4> 
+            <div class="notices info" ><p>Ở bước này, chúng ta sẽ tạo 1 IAM Role có tên: <strong>dothihoa-aws</strong></p>
+            </div>
+            <ol>
+              <li>Tạo tệp có tên: <strong>create_iam_role.py</strong></li>
+            </ol> 
+            <ol start="2">
+              <li>Copy đoạn code vào paste vào file <strong>create_iam_role.py</strong></li>
+            </ol>
+            
+            <pre>
+            <code tabindex="0">  
+              import boto3
+              import json 
+              client = boto3.client('iam')
+              assume_role_policy = {
+                  "Version": "2012-10-17",
+                  "Statement": [
+                      {
+                          "Effect": "Allow",
+                          "Principal": {
+                              "AWS": "arn:aws:iam::184381453232:user/DoThiHoa"
+                          },
+                          "Action": "sts:AssumeRole"
+                      }
+                  ]   
+              }
+              response = client.create_role(
+                  RoleName='dothihoa-aws',
+                  AssumeRolePolicyDocument=json.dumps(assume_role_policy)
+              )
+              print(response)
+            </code>
+            </pre>
+            
+            <ol start="3">
+              <li>Chạy chương trình bằng câu lệnh <code>python create_iam_role.py</code></li>
+            </ol>
+            <ol start="4">
+              <li>Sau khi chạy thành công, đi đến <a href="https://console.aws.amazon.com/iamv2/home?#/home">IAM service management console</a></li>
+            </ol>
+            <ul>
+              <li>Click vào <strong>Role</strong> và kiểm tra</li>
+            </ul>
+            <p><img src="../../images/6.SDK/s-4.png" alt="a-1"></p>
+            <p>Tạo IAM Role thành công</p>
+            
 
 
 

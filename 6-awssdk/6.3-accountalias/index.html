@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../images/favicon.png" type="image/png">
 
-    <title>Làm việc với IAM :: Tạo IAM users</title>
+    <title>Làm việc với IAM :: AWS SDK</title>
 
     
     <link href="../../css/nucleus.css?1691463368" rel="stylesheet">
@@ -697,7 +697,7 @@
             
           
           
-            <a href='../../'>IAM</a> > <a href='../../6-awssdk/'>Các bước chuẩn bị </a> > Tạo IAM users
+            <a href='../../'>IAM</a> > <a href='../../6-awssdk/'>Các bước chuẩn bị </a> > Tạo Account Alias
           
         
           
@@ -734,12 +734,44 @@
           
             <h1>
               
-              Tạo IAM users
+              Tạo Account Alias
             </h1>
           
+<h4>Tạo Account Alias</h4> 
+<div class="notices info" ><p>Ở bước này, chúng ta sẽ tạo Account Alias có tên: <strong>dothihoa-aws</strong></p>
+</div>
+<ol>
+  <li>Tạo tệp có tên: <strong>create_account_alias.py</strong></li>
+</ol> 
+<ol start="2">
+  <li>Copy đoạn code vào paste vào file <strong>create_account_alias.py</strong></li>
+</ol>  
 
-        
+<pre>
+  <code tabindex="0">  
+    import boto3
 
+    # Create IAM client
+    iam = boto3.client('iam')
+    
+    # Create an account alias
+    iam.create_account_alias(
+        AccountAlias='dothihoa-aws'
+    )
+  </code>
+  </pre>
+
+  <ol start="3">
+    <li>Chạy chương trình bằng câu lệnh <code>python create_account_alias.py</code></li>
+  </ol>
+  <ol start="4">
+    <li>Sau khi chạy thành công, đi đến <a href="https://console.aws.amazon.com/iamv2/home?#/home">IAM service management console</a></li>
+  </ol>
+  <ul>
+    <li>Kiểm tra thông tin của Account Alias</li>
+  </ul>
+  <p><img src="../../images/6.SDK/s-3.png" alt="a-1"></p>
+  <p>Tạo Account Alias thành công</p>
 
 
 

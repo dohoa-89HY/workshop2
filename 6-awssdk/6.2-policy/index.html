@@ -734,15 +734,78 @@
           
             <h1>
               
-              Tạo IAM users
+              Tạo Policy
             </h1>
           
 
         
 
+<h4>Tạo Policy</h4> 
+<div class="notices info" ><p>Ở bước này, chúng ta sẽ tạo 1 Policy user có tên: <strong>mys3ListOnly</strong></p>
+</div>
+<ol>
+  <li>Tạo tệp có tên: <strong>create_policy.py</strong></li>
+</ol> 
+<ol start="2">
+  <li>Copy đoạn code vào paste vào file <strong>create_policy.py</strong></li>
+</ol>
 
+<pre>
+  <code tabindex="0">  
+    import json
 
+    import boto3
+    
+    # Create IAM client
+    iam = boto3.client('iam')
+    
+    # Create a policy
+    my_managed_policy = {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": "logs:CreateLogGroup",
+                "Resource": "arn:aws:s3:::dohoe-bucket/*"
+            },
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "s3:ListAccessPoints",
+                    "s3:ListBucket",
+                    "s3:ListJobs",
+                    "s3:ListStorageLensConfigurations",
+                    "s3:ListAccessPointsForObjectLambda",
+                    "s3:ListBucketMultipartUploads",
+                    "s3:ListMultipartUploadParts",
+                    "s3:ListAllMyBuckets",
+                    "s3:ListBucketVersions",
+                    "s3:ListMultiRegionAccessPoints"
+                    
+                ],
+                "Resource": "arn:aws:s3:::dohoe-bucket/*"
+            }
+        ]
+    }
+    response = iam.create_policy(
+      PolicyName='myS3ListOnly',
+      PolicyDocument=json.dumps(my_managed_policy)
+    )
+    print(response)
+  </code>
+  </pre>
 
+  <ol start="3">
+    <li>Chạy chương trình bằng câu lệnh <code>python create_policy.py</code></li>
+  </ol>
+  <ol start="4">
+    <li>Sau khi chạy thành công, đi đến <a href="https://console.aws.amazon.com/iamv2/home?#/home">IAM service management console</a></li>
+  </ol>
+  <ul>
+    <li>Click vào <strong>Policies</strong> và kiểm tra</li>
+  </ul>
+  <p><img src="../../images/6.SDK/s-2.png" alt="a-1"></p>
+  <p>Tạo Policy thành công</p>
 
 
 
